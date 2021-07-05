@@ -22,7 +22,7 @@ const isNpmGlobalPackage = require('../lib/utils/npmPackage/isGlobal');
       messageTokens.push('To start your first project run “serverless”.');
     }
 
-    if ((isStandaloneExecutable && !isWindows) || (await isNpmGlobalPackage())) {
+    if ((isStandaloneExecutable && !isWindows) || isNpmGlobalPackage()) {
       messageTokens.push('Turn on automatic updates by running “serverless config --autoupdate”.');
     }
 
